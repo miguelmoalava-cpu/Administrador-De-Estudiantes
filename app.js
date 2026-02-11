@@ -19,9 +19,9 @@ function sortStudentsByName() {
 }
 
 function renderStudents() {
-    studentList.innerHTML = '';
+    sortStudentsByName
     
-    sortStudentsByName();
+    studentList.innerHTML = '';
     
     students.forEach((student, index) => {
         const row = document.createElement('tr');
@@ -47,7 +47,11 @@ function renderStudents() {
 form.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    const name = document.getElementById('name').value.trim();
+   const name = document
+    .getElementById('name')
+    .value
+    .trim()
+    .toLowerCase();
     const grade1 = Number(document.getElementById('grade1').value);
     const grade2 = Number(document.getElementById('grade2').value);
     const grade3 = Number(document.getElementById('grade3').value);
