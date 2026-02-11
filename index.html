@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Administrador de Estudiantes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1>Administrador de Estudiantes</h1>
+
+    <form id="student-form">
+        <input type="text" id="name" placeholder="Nombre del estudiante" required>
+        <input type="number" id="grade1" placeholder="Nota 1" min="0" max="10" required>
+        <input type="number" id="grade2" placeholder="Nota 2" min="0" max="10" required>
+        <input type="number" id="grade3" placeholder="Nota 3" min="0" max="10" required>
+        <button type="submit">Guardar</button>
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Nota 1</th>
+                <th>Nota 2</th>
+                <th>Nota 3</th>
+                <th>Promedio</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody id="student-list"></tbody>
+    </table>
+
+    <script src="app.js"></script>
+</body>
+</html>
