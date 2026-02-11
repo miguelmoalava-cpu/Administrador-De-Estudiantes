@@ -47,7 +47,7 @@ function renderStudents() {
 form.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    const name = document.getElementById('name').value;
+    const name = document.getElementById('name').value.trim();
     const grade1 = Number(document.getElementById('grade1').value);
     const grade2 = Number(document.getElementById('grade2').value);
     const grade3 = Number(document.getElementById('grade3').value);
