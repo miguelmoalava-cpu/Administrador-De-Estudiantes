@@ -12,8 +12,12 @@ function calculateAverage(a, b, c) {
     return ((a + b + c) / 3).toFixed(2);
 }
 function sortStudentsByName() {
-    students.sort((a, b) => a.name.localeCompare(b.name));
+    students.sort((a, b) =>
+        a.name.trim().toLowerCase()
+        .localeCompare(b.name.trim().toLowerCase())
+    );
 }
+
 function renderStudents() {
     studentList.innerHTML = '';
     
