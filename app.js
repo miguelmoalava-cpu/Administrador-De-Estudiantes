@@ -11,10 +11,14 @@ function saveToLocalStorage() {
 function calculateAverage(a, b, c) {
     return ((a + b + c) / 3).toFixed(2);
 }
-
+function sortStudentsByName() {
+    students.sort((a, b) => a.name.localeCompare(b.name));
+}
 function renderStudents() {
     studentList.innerHTML = '';
-
+    
+    sortStudentsByName();
+    
     students.forEach((student, index) => {
         const row = document.createElement('tr');
 
